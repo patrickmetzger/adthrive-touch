@@ -17,7 +17,6 @@
 
 		<?php } ?>
 	</div> <!-- content -->
-
 	<?php get_template_part( 'related-posts' ); ?>
 
 	<?php get_template_part( 'nav-bar' ); ?>

@@ -53,10 +53,9 @@
 		<?php } ?>
 	</div> <!-- content -->
 
-	<?php get_template_part( 'related-posts' ); ?>
-
 	<?php get_template_part( 'nav-bar' ); ?>
 	<?php if ( comments_open() || wptouch_have_comments() ) { ?>
+    <div id="view-comments"><a class="various" href="#comments">View Comments</a></div>
 		<div id="comments">
 			<?php comments_template(); ?>
 		</div>

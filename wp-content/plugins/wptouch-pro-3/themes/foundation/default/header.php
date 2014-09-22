@@ -4,6 +4,8 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 		<?php wptouch_head(); ?>
+        
+        <?php comments_popup_script(); ?>
 	</head>
 	
 	<!-- Help speed up display of the page -->

@@ -1,6 +1,7 @@
 <?php  if ( is_single() ) { ?>
 	<div class="nav-bar clearfix">		
 		<div class="nav-controls">
+            <?php var_dump(wptouch_fdn_if_previous_post()); ?>
 			<?php if ( wptouch_fdn_if_previous_post_link() ) { ?>
 				<a class="prev-post" href="<?php wptouch_fdn_get_previous_post_link(); ?>">
 					<?php _e( 'previous post', 'wptouch-pro' ); ?>

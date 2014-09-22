@@ -15,5 +15,23 @@
 		<?php get_template_part( 'switch-link' ); ?>
 	
 	</div><!-- page wrapper -->
+<script>
+    jQuery.noConflict();
+        (function( $ ) {
+        $(document).ready(function() {
+            $(".comments").fancybox({
+                maxWidth	: 320,
+                maxHeight	: 300,
+                fitToView	: true,
+                width		: '70%',
+                height		: '70%',
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        });
+    })(jQuery);
+</script>
 </body>
 </html>

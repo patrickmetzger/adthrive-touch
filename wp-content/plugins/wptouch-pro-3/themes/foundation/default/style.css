@@ -802,7 +802,13 @@ li .social-footer-badges {
 /* @group Comments */
 
 #comments {
+    display: none;
 
+}
+#view-comments {
+    width: 100%;
+    text-align: center;
+    padding:10px 0;
 }
 
 p.comment-awaiting-moderation {
