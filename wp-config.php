@@ -22,7 +22,7 @@ define('DB_NAME', 'wp_touch_test');
 define('DB_USER', 'pmetzger');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'r4wqYdJJQQB8ScLV');
+define('DB_PASSWORD', 'reg2tem');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

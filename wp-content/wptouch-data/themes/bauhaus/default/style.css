@@ -757,13 +757,15 @@ ul.dots {
 .no-com-bubbles #slider .comments-number, .no-com-bubbles .loop-link .comments {
 	display: none;
 }
-
+#comments {margin:0 auto;}
 #comments {
 	color: rgba(0,0,0,.7);
-	background-color: rgba(255,255,255,.3);
-	border-top: 1px solid rgba(0,0,0,.1);
-	border-bottom: 1px solid rgba(0,0,0,.1);
+	background-color: rgba(180,255,255,.3);
+	border: 1px solid rgba(0,0,0,.1);
+	//border-bottom: 1px solid rgba(0,0,0,.1);
 	padding-bottom: 20px;
+  border-radius: 10px;
+  width: 90%;
 }
 
 #responses, #respond {

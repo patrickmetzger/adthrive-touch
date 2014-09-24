@@ -19,17 +19,9 @@
     jQuery.noConflict();
         (function( $ ) {
         $(document).ready(function() {
-            $(".comments").fancybox({
-                maxWidth	: 320,
-                maxHeight	: 300,
-                fitToView	: true,
-                width		: '70%',
-                height		: '70%',
-                autoSize	: false,
-                closeClick	: false,
-                openEffect	: 'none',
-                closeEffect	: 'none'
-            });
+          $( '#view-comments' ).on( 'click', function(){
+            $( '#comments' ).toggle();
+          });
         });
     })(jQuery);
 </script>

@@ -55,10 +55,37 @@
 
 	<?php get_template_part( 'nav-bar' ); ?>
 	<?php if ( comments_open() || wptouch_have_comments() ) { ?>
-    <div id="view-comments"><a class="various" href="#comments">View Comments</a></div>
+  <div id="view-comments"><a><span class="comment-view"></span> Comments</a></div>
 		<div id="comments">
 			<?php comments_template(); ?>
 		</div>
 	<?php } ?>
+  
+  <ul>
+  <?php
+  $args = array( 'posts_per_page' => 50);
 
+  $myposts = get_posts( $args );
+  foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+    <li>
+      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    </li>
+  <?php endforeach; 
+  wp_reset_postdata();?>
+
+  </ul>
+  
+  
+  <?php exit(); ?>
+  
+  <?php $query = new WP_Query( $query_string . '&post_type=' . $post_type . '&max_num_pages=10&posts_per_page='. foundation_number_of_posts_to_show() .'' ); 
+    var_dump($query_string);
+    if ( $query->have_posts() ) { while ( $query->have_posts() ) { 
+      $query->the_post(); ?>
+  <div>alkjflkdsjf</div>
+			<?php get_template_part( 'post-loop' ); ?>
+
+			<?php } // $query ?>
+  <?php } ?>
+  
 <?php get_footer(); ?>

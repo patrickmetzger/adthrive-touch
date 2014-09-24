@@ -803,8 +803,14 @@ li .social-footer-badges {
 
 #comments {
     display: none;
-
 }
+span.comment-view{ content: 'View'}
+
+#comments .toggled {
+    display: block;
+}
+
+
 #view-comments {
     width: 100%;
     text-align: center;

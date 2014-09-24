@@ -1701,8 +1701,8 @@ class WPtouchProThree {
 			wp_enqueue_script( 'wptouch-admin-js-bootstrap', $this->check_and_use_js_file( '/admin/bootstrap/js/bootstrap.js' ), false, md5( WPTOUCH_VERSION ) );
 		}
 	}
-
-	function handle_client_ajax() {
+  
+  function handle_client_ajax() {
 		$nonce = $this->post['wptouch_nonce'];
 		if ( !wp_verify_nonce( $nonce, 'wptouch-ajax' ) ) {
 			die( 'Security problem with nonce' );
@@ -1722,7 +1722,7 @@ class WPtouchProThree {
 		add_action( 'wp_footer', array( &$this, 'handle_footer' ) );
 
 		wp_enqueue_script( 'wptouch-ajax', WPTOUCH_URL . '/include/js/wptouch.js', array( 'jquery' ), md5( WPTOUCH_VERSION ), true );
-
+    
 		$localize_params = 	array(
 			'ajaxurl' => get_bloginfo( 'wpurl' ) . '/wp-admin/admin-ajax.php',
 			'siteurl' => str_replace( array( 'http://' . $_SERVER['SERVER_NAME'] . '','https://' . $_SERVER['SERVER_NAME'] . '' ), '', get_bloginfo( 'url' ) . '/' ),

@@ -109,7 +109,9 @@
  }
 </script>
 
+
 <div id="content">
+
   <?php $count = 1; ?>
 	<?php if ( wptouch_have_posts() ) while ( wptouch_have_posts() ) { ?>
     <?php wptouch_the_post(); ?>
@@ -127,20 +129,20 @@
             </script> 
         </div>";
     }
-    $count++;
     ?>
     <script>
-      moreContent();
+      //moreContent();
     </script>
-		<div class="<?php wptouch_post_classes(); ?>">
+		<div class="<?php wptouch_post_classes(); ?> post_<?php echo $count; ?> ">
 			<?php get_template_part( 'post-loop' ); ?>
 		</div> <!-- post classes -->
+    <?php $count++; ?>
 	<?php } else { ?> 
 		<!-- no posts -->
 	<?php } ?>
-
+  
 	<?php if ( foundation_is_theme_using_module( 'infinite-scroll' ) ) { ?>		
-		<?php if ( get_next_posts_link() ) { ?>
+		<?php if ( get_next_posts_link() ) { var_dump(get_next_posts_page_link()); ?>
   			<!-- hidden in css, needed to add js -->
 			<a class="infinite-link" href="#" rel="<?php echo get_next_posts_page_link(); ?>"></a>
 		<?php } ?>
@@ -163,5 +165,6 @@
 	<?php } ?>
 
 </div><!-- #content -->
+
 
 <?php get_footer(); ?>
